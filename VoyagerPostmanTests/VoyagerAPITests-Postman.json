@@ -1,0 +1,233 @@
+{
+	"info": {
+		"_postman_id": "c1b53a35-346d-4da3-a537-a65ad728fb7d",
+		"name": "VoyagerTests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/crew",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a5ec38c8-c19e-4191-a62f-879428658f24",
+						"exec": [
+							"pm.test('200 Status Code', function(){",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"/*pm.test('response size is 2', function(){",
+							"   pm.expect(pm.response.json().length).to.eql(2);",
+							"});*/",
+							"",
+							"/*pm.test('id is 11134', function(){",
+							"   pm.expect(pm.response.json()[0].id).to.eql(11134);",
+							"});",
+							"",
+							"pm.test('name is Tuvok', function(){",
+							"   pm.expect(pm.response.json()[0].name).to.eql(\"Tuvok\");",
+							"});",
+							"",
+							"pm.test('dept is Tactical', function(){",
+							"   pm.expect(pm.response.json()[0].dept).to.eql(\"Tactical\");",
+							"});*/",
+							"",
+							"",
+							"var schema = {",
+							"    \"$schema\": \"http://json-schema.org/draft-07/schema\",",
+							"    \"$id\": \"http://example.com/example.json\",",
+							"    \"type\": \"array\",",
+							"    \"title\": \"The Root Schema\",",
+							"    \"description\": \"The root schema comprises the entire JSON document.\",",
+							"    \"items\": {",
+							"        \"$id\": \"#/items\",",
+							"        \"type\": \"object\",",
+							"        \"title\": \"The Items Schema\",",
+							"        \"description\": \"An explanation about the purpose of this instance.\",",
+							"        \"default\": {},",
+							"        \"examples\": [",
+							"            {",
+							"                \"name\": \"Tuvok\",",
+							"                \"dept\": \"Tactical\",",
+							"                \"id\": 11134.0",
+							"            },",
+							"            {",
+							"                \"id\": 12334.0,",
+							"                \"name\": \"Bellana\",",
+							"                \"dept\": \"Engineering\"",
+							"            }",
+							"        ],",
+							"        \"required\": [",
+							"            \"id\",",
+							"            \"name\",",
+							"            \"dept\"",
+							"        ],",
+							"        \"properties\": {",
+							"            \"id\": {",
+							"                \"$id\": \"#/items/properties/id\",",
+							"                \"type\": \"integer\",",
+							"                \"title\": \"The Id Schema\",",
+							"                \"description\": \"An explanation about the purpose of this instance.\",",
+							"                \"default\": 0,",
+							"                \"examples\": [",
+							"                    11134",
+							"                ]",
+							"            },",
+							"            \"name\": {",
+							"                \"$id\": \"#/items/properties/name\",",
+							"                \"type\": \"string\",",
+							"                \"title\": \"The Name Schema\",",
+							"                \"description\": \"An explanation about the purpose of this instance.\",",
+							"                \"default\": \"\",",
+							"                \"examples\": [",
+							"                    \"Tuvok\"",
+							"                ]",
+							"            },",
+							"            \"dept\": {",
+							"                \"$id\": \"#/items/properties/dept\",",
+							"                \"type\": \"string\",",
+							"                \"title\": \"The Dept Schema\",",
+							"                \"description\": \"An explanation about the purpose of this instance.\",",
+							"                \"default\": \"\",",
+							"                \"examples\": [",
+							"                    \"Tactical\"",
+							"                ]",
+							"            }",
+							"        }",
+							"    }",
+							"};",
+							"",
+							"var jsonData = pm.response.json();",
+							"//var data2 = [true, 123];",
+							"",
+							"pm.test('Schema is valid', function() {",
+							"  pm.expect(tv4.validate(jsonData, schema)).to.be.true;",
+							"  //pm.expect(tv4.validate(data2, schema)).to.be.true;",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/crew",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"crew"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/crew/{id}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "23405396-17d7-4516-ba10-5cc16229405c",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Id is 11134\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.id).to.eql(11134);",
+							"});",
+							"",
+							"pm.test(\"Name is Tuvok\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.name).to.eql(\"Tuvok\");",
+							"});",
+							"",
+							"pm.test(\"Dept is Tactical\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.dept).to.eql(\"Tactical\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/crew/11134",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"crew",
+						"11134"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/crew",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "98719426-1d1a-4add-b5c4-2b4e8820075d",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Name is Janeway\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.name).to.eql(\"Janeway\");",
+							"});",
+							"",
+							"pm.test(\"Dept is Bridge\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.dept).to.eql(\"Bridge\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n    \"name\": \"Janeway\",\n    \"dept\": \"Bridge\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/crew",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"crew"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
