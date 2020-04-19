@@ -1,0 +1,446 @@
+{
+  "aggregate": {
+    "timestamp": "2020-04-01T01:56:00.779Z",
+    "scenariosCreated": 60,
+    "scenariosCompleted": 60,
+    "requestsCompleted": 120,
+    "latency": {
+      "min": 3.3,
+      "max": 101.8,
+      "median": 5.7,
+      "p95": 13.2,
+      "p99": 59.1
+    },
+    "rps": {
+      "count": 120,
+      "mean": 2.02
+    },
+    "scenarioDuration": {
+      "min": 12.1,
+      "max": 127.8,
+      "median": 16.2,
+      "p95": 32.4,
+      "p99": 127.1
+    },
+    "scenarioCounts": {
+      "Get Information about Crew": 26,
+      "Post a new Crew and Get": 34
+    },
+    "errors": {},
+    "codes": {
+      "200": 120
+    },
+    "matches": 0,
+    "customStats": {},
+    "counters": {},
+    "scenariosAvoided": 0,
+    "phases": [
+      {
+        "duration": 60,
+        "arrivalRate": 1,
+        "name": "1 Request per second configuration"
+      }
+    ]
+  },
+  "intermediate": [
+    {
+      "timestamp": "2020-04-01T01:55:10.260Z",
+      "scenariosCreated": 9,
+      "scenariosCompleted": 9,
+      "requestsCompleted": 18,
+      "latency": {
+        "min": 3.9,
+        "max": 101.8,
+        "median": 7.5,
+        "p95": 77.4,
+        "p99": 101.8
+      },
+      "rps": {
+        "count": 18,
+        "mean": 2.02
+      },
+      "scenarioDuration": {
+        "min": 19.1,
+        "max": 127.8,
+        "median": 21.1,
+        "p95": 127.8,
+        "p99": 127.8
+      },
+      "scenarioCounts": {
+        "Get Information about Crew": 5,
+        "Post a new Crew and Get": 4
+      },
+      "errors": {},
+      "codes": {
+        "200": 18
+      },
+      "matches": 0,
+      "latencies": [
+        14176442,
+        40841420,
+        6262400,
+        5968713,
+        101760302,
+        7796336,
+        9036602,
+        5801208,
+        12558451,
+        5382054,
+        6759934,
+        5621719,
+        7157204,
+        5996387,
+        8742779,
+        3923041,
+        8712048,
+        8350032
+      ],
+      "customStats": {},
+      "counters": {},
+      "concurrency": 0,
+      "pendingRequests": 0,
+      "scenariosAvoided": 0
+    },
+    {
+      "timestamp": "2020-04-01T01:55:20.257Z",
+      "scenariosCreated": 10,
+      "scenariosCompleted": 10,
+      "requestsCompleted": 20,
+      "latency": {
+        "min": 4.2,
+        "max": 13.8,
+        "median": 6.1,
+        "p95": 12,
+        "p99": 13.8
+      },
+      "rps": {
+        "count": 20,
+        "mean": 2
+      },
+      "scenarioDuration": {
+        "min": 15,
+        "max": 30,
+        "median": 17.2,
+        "p95": 30,
+        "p99": 30
+      },
+      "scenarioCounts": {
+        "Post a new Crew and Get": 5,
+        "Get Information about Crew": 5
+      },
+      "errors": {},
+      "codes": {
+        "200": 20
+      },
+      "matches": 0,
+      "latencies": [
+        13830811,
+        10094474,
+        5883110,
+        7239807,
+        6180581,
+        4218582,
+        5683921,
+        4574779,
+        6940028,
+        6146651,
+        7319743,
+        7819267,
+        5866268,
+        5607334,
+        5683511,
+        6131033,
+        8078854,
+        5843911,
+        5979684,
+        4378867
+      ],
+      "customStats": {},
+      "counters": {},
+      "concurrency": 0,
+      "pendingRequests": 0,
+      "scenariosAvoided": 0
+    },
+    {
+      "timestamp": "2020-04-01T01:55:30.256Z",
+      "scenariosCreated": 10,
+      "scenariosCompleted": 10,
+      "requestsCompleted": 20,
+      "latency": {
+        "min": 3.7,
+        "max": 24.1,
+        "median": 5.7,
+        "p95": 17.2,
+        "p99": 24.1
+      },
+      "rps": {
+        "count": 20,
+        "mean": 2
+      },
+      "scenarioDuration": {
+        "min": 13.2,
+        "max": 34.8,
+        "median": 16.3,
+        "p95": 34.8,
+        "p99": 34.8
+      },
+      "scenarioCounts": {
+        "Post a new Crew and Get": 8,
+        "Get Information about Crew": 2
+      },
+      "errors": {},
+      "codes": {
+        "200": 20
+      },
+      "matches": 0,
+      "latencies": [
+        10248752,
+        9110105,
+        7269322,
+        9031706,
+        5808970,
+        3709184,
+        6064038,
+        4698661,
+        5317323,
+        5215885,
+        5426762,
+        24078369,
+        6554353,
+        6789584,
+        5659929,
+        5359150,
+        6658457,
+        5024971,
+        4891073,
+        5177646
+      ],
+      "customStats": {},
+      "counters": {},
+      "concurrency": 0,
+      "pendingRequests": 0,
+      "scenariosAvoided": 0
+    },
+    {
+      "timestamp": "2020-04-01T01:55:40.256Z",
+      "scenariosCreated": 10,
+      "scenariosCompleted": 10,
+      "requestsCompleted": 20,
+      "latency": {
+        "min": 3.4,
+        "max": 9.4,
+        "median": 5.7,
+        "p95": 8.4,
+        "p99": 9.4
+      },
+      "rps": {
+        "count": 20,
+        "mean": 2
+      },
+      "scenarioDuration": {
+        "min": 12.8,
+        "max": 22.3,
+        "median": 16.2,
+        "p95": 22.3,
+        "p99": 22.3
+      },
+      "scenarioCounts": {
+        "Get Information about Crew": 5,
+        "Post a new Crew and Get": 5
+      },
+      "errors": {},
+      "codes": {
+        "200": 20
+      },
+      "matches": 0,
+      "latencies": [
+        6566086,
+        6200318,
+        9396035,
+        7341985,
+        6804148,
+        5685782,
+        5265641,
+        5328707,
+        5911723,
+        5320731,
+        5739377,
+        3369104,
+        5753533,
+        4615000,
+        5698733,
+        4499073,
+        5641493,
+        4291851,
+        6040766,
+        7031413
+      ],
+      "customStats": {},
+      "counters": {},
+      "concurrency": 0,
+      "pendingRequests": 0,
+      "scenariosAvoided": 0
+    },
+    {
+      "timestamp": "2020-04-01T01:55:50.255Z",
+      "scenariosCreated": 10,
+      "scenariosCompleted": 10,
+      "requestsCompleted": 20,
+      "latency": {
+        "min": 4.2,
+        "max": 14.1,
+        "median": 5,
+        "p95": 11,
+        "p99": 14.1
+      },
+      "rps": {
+        "count": 20,
+        "mean": 2
+      },
+      "scenarioDuration": {
+        "min": 12.9,
+        "max": 23.1,
+        "median": 14.7,
+        "p95": 23.1,
+        "p99": 23.1
+      },
+      "scenarioCounts": {
+        "Get Information about Crew": 4,
+        "Post a new Crew and Get": 6
+      },
+      "errors": {},
+      "codes": {
+        "200": 20
+      },
+      "matches": 0,
+      "latencies": [
+        14094899,
+        4234310,
+        7873706,
+        5336439,
+        5745399,
+        4152464,
+        4910394,
+        4506089,
+        5093806,
+        4476243,
+        4996043,
+        4212782,
+        5453959,
+        4179023,
+        5053780,
+        5197558,
+        5431196,
+        4792562,
+        4870433,
+        4209408
+      ],
+      "customStats": {},
+      "counters": {},
+      "concurrency": 0,
+      "pendingRequests": 0,
+      "scenariosAvoided": 0
+    },
+    {
+      "timestamp": "2020-04-01T01:56:00.254Z",
+      "scenariosCreated": 10,
+      "scenariosCompleted": 10,
+      "requestsCompleted": 20,
+      "latency": {
+        "min": 3.3,
+        "max": 7.9,
+        "median": 5.1,
+        "p95": 6.8,
+        "p99": 7.9
+      },
+      "rps": {
+        "count": 20,
+        "mean": 2
+      },
+      "scenarioDuration": {
+        "min": 12.1,
+        "max": 18.8,
+        "median": 14.5,
+        "p95": 18.8,
+        "p99": 18.8
+      },
+      "scenarioCounts": {
+        "Get Information about Crew": 5,
+        "Post a new Crew and Get": 5
+      },
+      "errors": {},
+      "codes": {
+        "200": 20
+      },
+      "matches": 0,
+      "latencies": [
+        5759638,
+        3340293,
+        7875927,
+        5074409,
+        5175889,
+        5078037,
+        5180067,
+        4309924,
+        5772313,
+        4920431,
+        5487795,
+        5150638,
+        5365620,
+        4063733,
+        4354292,
+        3655537,
+        5042879,
+        3533427,
+        4892813,
+        3475653
+      ],
+      "customStats": {},
+      "counters": {},
+      "concurrency": 0,
+      "pendingRequests": 0,
+      "scenariosAvoided": 0
+    },
+    {
+      "timestamp": "2020-04-01T01:56:00.775Z",
+      "scenariosCreated": 1,
+      "scenariosCompleted": 1,
+      "requestsCompleted": 2,
+      "latency": {
+        "min": 4.7,
+        "max": 6,
+        "median": 5.4,
+        "p95": 6,
+        "p99": 6
+      },
+      "rps": {
+        "count": 2,
+        "mean": 3.92
+      },
+      "scenarioDuration": {
+        "min": 16.7,
+        "max": 16.7,
+        "median": 16.7,
+        "p95": 16.7,
+        "p99": 16.7
+      },
+      "scenarioCounts": {
+        "Post a new Crew and Get": 1
+      },
+      "errors": {},
+      "codes": {
+        "200": 2
+      },
+      "matches": 0,
+      "latencies": [
+        6047449,
+        4664793
+      ],
+      "customStats": {},
+      "counters": {},
+      "concurrency": 0,
+      "pendingRequests": 0,
+      "scenariosAvoided": 0
+    }
+  ]
+}

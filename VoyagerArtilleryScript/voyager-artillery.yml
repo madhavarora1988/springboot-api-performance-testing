@@ -1,0 +1,60 @@
+config:
+  defaults:
+   headers:
+     Content-Type: "application/json;charset=UTF-8"
+
+  phases:
+    - duration: 60
+      arrivalRate: 1
+      name : "1 Request per second configuration"
+  
+  environments:
+    dev: 
+      target: "http://localhost:8080"
+      responseCode: "200"
+
+    qa:
+      target: "http://localhost:8082"
+      responseCode: "200"
+    
+    stg:
+      target: "http://localhost:8080"
+      responseCode: "200"
+
+    prd:
+      target: "http://localhost:8080"
+      responseCode: "200"
+
+definitions: 
+  - postCrew: &postCrewDefinition
+      json:
+        name: "Janeway"
+        dept: "Bridge"
+  - header: &headerDefinition
+      headers:
+        Accept: "application/json;charset=UTF-8"
+        Content-Type: "application/json;charset=UTF-8"     
+ 
+scenarios: 
+  - name: "Get Information about Crew"
+    weight: 1
+    flow:
+     - get:
+         url: "/crew"
+         <<: *headerDefinition
+     - get:
+         url: "/crew/11134"
+         <<: *headerDefinition
+
+  - name: "Post a new Crew and Get"
+    weight: 1
+    flow:
+     - post:
+         url: "/crew"
+         <<: *headerDefinition
+         <<: *postCrewDefinition
+     - get:
+         url: "/crew"
+         <<: *headerDefinition
+     
+
